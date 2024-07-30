@@ -17,9 +17,15 @@ window.addEventListener("keydown", handleKeyDown)
   }
 },[onCloseModal])
 
+const handleBackDropClick=(event)=> {
+  if(event.target === event.currentTarget) {
+    onCloseModal();
+  }
+
+}
 
   return (
-    <div className={css.backdrop}>
+    <div onClick={handleBackDropClick} className={css.backdrop}>
       <div className={css.modal}>
         <button 
         onClick={onCloseModal}
