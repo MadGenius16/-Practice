@@ -2,7 +2,13 @@ import css from './Modal.module.css'
 import { useEffect, useState } from 'react'
 
 const Modal = ({onCloseModal}) => {
-const[counter, setCounter] = useState(0)
+const[counter, setCounter] = useState(()=>{
+  return parseInt(localStorage.getItem("counterValue") ?? 0 )
+})
+
+useEffect(()=>{
+  localStorage.setItem("counterValue", counter)
+}, [counter])
 
 useEffect(()=>{
  const handleKeyDown = (event)=>{
@@ -21,7 +27,6 @@ const handleBackDropClick=(event)=> {
   if(event.target === event.currentTarget) {
     onCloseModal();
   }
-
 }
 
   return (
