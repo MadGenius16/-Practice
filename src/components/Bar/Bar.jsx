@@ -1,4 +1,4 @@
-import css from '../components/Bar.module.css'
+import css from '../Bar/Bar.module.css'
 
 const Bar = ({beer, wine, gin, total, onBarClick}) => {
   return (
