@@ -1,19 +1,26 @@
-import css from '../Bar/Bar.module.css'
-
-const Bar = ({beer, wine, gin, total, onBarClick}) => {
+const Bar = ({ beer, wine, whiskey, total, onBarSupplyAdd }) => {
   return (
     <div>
-      <ul className={css.list}>
+      <ul>
         <li>Beer: {beer}</li>
         <li>Wine: {wine}</li>
-        <li>Gin: {gin}</li>
-        <li><b>Total</b>:{total}</li>
+        <li>Whiskey: {whiskey}</li>
+        <li>
+          <b>Total</b>: {total}
+        </li>
       </ul>
-      <button type='button' onClick={()=>onBarClick("beer")}>Beer</button>
-      <button type='button' onClick={()=>onBarClick("wine")}>Wine</button>
-      <button type='button' onClick={()=>onBarClick("gin")}>Gin</button>
-    </div>
-  ) 
-}
 
-export default Bar
+      <button type="button" onClick={() => onBarSupplyAdd("beer")}>
+        Add beer
+      </button>
+      <button type="button" onClick={() => onBarSupplyAdd("wine")}>
+        Add wine
+      </button>
+      <button type="button" onClick={() => onBarSupplyAdd("whiskey")}>
+        Add whiskey
+      </button>
+    </div>
+  );
+};
+
+export default Bar;

@@ -1,0 +1,32 @@
+.form{
+  border: 1px solid black;
+  padding: 20px;
+}
+.label{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.statusWrap{
+  display: flex;
+  align-items: center;
+}
+.btnSubmit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  border: none;
+  border-radius: 15px;
+  padding:10px 20px;
+  min-width: 140px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.checkboxlabel{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 20px;
+}
