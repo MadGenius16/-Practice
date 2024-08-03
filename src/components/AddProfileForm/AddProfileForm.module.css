@@ -1,6 +1,7 @@
 .form{
   border: 1px solid black;
   padding: 20px;
+  max-width: 400px;
 }
 .label{
   display: flex;
@@ -29,4 +30,13 @@
   gap: 8px;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.errorText{
+  font-size: 14px;
+  color: red;
+  background-color: bisque;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px;
 }

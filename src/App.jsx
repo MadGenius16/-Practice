@@ -10,7 +10,7 @@ import dataFromServer from "./components/db/Profiles.json";
 import AddProfileForm from "./components/AddProfileForm/AddProfileForm";
 
 function App() {
-  const [showUserList, setShowUserList] = useState(false);
+  const [showUserList, setShowUserList] = useState(true);
   const[users, setUsers]= useState(dataFromServer)
   const[filterValue, setFilterValue] = useState("")
 
@@ -27,7 +27,8 @@ function App() {
 
 const onAddProfile =(profile) =>{
   const finalProfile = {
-    ...profile, id: nanoid()
+    ...profile, 
+    id: nanoid()
   }
 
   setUsers([finalProfile, ...users])
@@ -83,7 +84,7 @@ const onAddProfile =(profile) =>{
         </button>
         {isModalOpen && <Modal onCloseModal={onCloseModal} />}
       </Section> */}
-      <Section>
+    
         <button type="button" onClick={toggleUserList}>
           Toggle User List
         </button>
@@ -116,7 +117,7 @@ const onAddProfile =(profile) =>{
             })}
           </div>
         )}
-      </Section>
+    
     </div>
   );
 }
